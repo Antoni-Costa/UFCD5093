@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main(void) {
+    printf("Calculador de numero factorial.\n ");
+
+    int number;
+    int factorial = 1;
+
+    printf("Insira um numero: ");
+    scanf("%d", &number);
+
+
+    //Condiçoes
+    if (number < 0) {
+        printf("Numero invalido.\n");
+    } else if (number == 0) {
+        printf("Factorial de 0 e: 1\n");
+    }  else {
+        printf("Factorial de %d e:\n", number);
+        int num = number; //Guarda o numero original para a mensagem.
+
+        for (int i = 1; i <= num; i++) {
+            factorial *= i; //fact = fact * i
+        }
+
+        printf("O factorial de %d e: %d\n", num , factorial);
+    }
+
+    printf("Parabens aprendeu o factorial do numero %d!", number);
+
+
+    return 0;
+}

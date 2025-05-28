@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+int main(void) {
+
+    /*
+     *Recorrendo à técnica de loop crie uma app que faça a tabuada
+     *
+     *exp:
+     *num = 5
+     *
+     *output;
+     *
+     * 1 * 5 = 5
+     * 2 * 5 = 10
+     * 3 * 5 = 15
+     * 4 * 5 = 20
+     * 5 * 5 = 25
+     * 6 * 5 = 30
+     * 7 * 5 = 35
+     * 8 * 5 = 40
+     * 9 * 5 = 45
+     *10 * 5 = 50
+     */
+
+    printf("Calculador da tabuada.\n ");
+
+    int number;
+    int multiplier;
+
+    printf("Insira um numero: ");
+    scanf("%d", &number);
+
+    printf("A tabuada do numero %d é:\n, numero");
+
+    for (multiplier = 1; multiplier <= 10; multiplier++) {
+
+        int result = number * multiplier;
+        printf("%d * %d = %d\n", number, multiplier, result);
+    }
+
+    printf("Parabens aprendeu a tabuada do numero %d!", number);
+
+    return 0;
+}

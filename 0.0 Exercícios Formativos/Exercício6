@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <ctype.h>
+
+typedef struct {
+    int horas12, minutos;
+    char pergunta;
+} horas12;
+
+horas12 converter(int horas24, int m) {
+    horas12 res;
+    res.minutos = m;
+    res.horas12 = (horas24 == 0 || horas24 == 12) ? 12 : horas24 % 12;
+    res.pergunta = (horas24 == 0) ? 'A' : 'P';
+    return res;
+}
+
+void mostrar(horas12 h) {
+    printf("Convertido: %d:%02d %c.M.\n", h.horas12, h.minutos, h.pergunta);
+}
+
+int main(void) {
+
+    int horas24, m;
+    char pergunta2;
+
+    do {
+        printf("Insira a hora: ");
+        scanf("%d", &horas24);
+
+        printf("Insira os minutos: ");
+        scanf("%d", &m);
+
+        mostrar(converter(horas24, m));
+
+        printf("Deseja converter outra vez? 'S' para sim 'N' para nao. \n");
+        while (getchar() != '\n');
+        scanf("%c", &pergunta2);
+        pergunta2 = toupper(pergunta2);
+
+    } while (pergunta2 == 'S');
+
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void) {
+
+    int num1, num2, num3;
+    printf("Forneca o primeiro numero: ");
+    scanf("%d", &num1);
+    printf("Forneca o segundo numero: ");
+    scanf("%d", &num2);
+    printf("Forneca o terceiro numero: ");
+    scanf("%d", &num3);
+
+    int sum = num1 + num2 + num3;
+    printf("A soma de %d + %d + %d e igual a: %d\n", num1, num2, num3, sum);
+
+}

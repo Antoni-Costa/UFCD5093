@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string>
+
+
+//calculadora com funçoes
+
+int main(void) {
+
+    printf("Calculadora de funcoes.");
+
+    int num1, num2;
+    char funcao;
+
+    printf("Que funcao deseja?\nM para mulplicar, D para dividir, A para adicionar, S para subtrair.\n");
+    scanf("%c", &funcao);
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%d", &num2);
+
+    if (funcao == 'M' || funcao == 'm') {
+        int resultado = num1 * num2;
+        printf("O resultado de num1 * num2: %d\n", resultado);
+    }
+    else if (funcao == 'D' || funcao == 'd') {
+        int resultado = num1 / num2;
+        printf("O resultado de num1 / num2: %d\n", resultado);
+    }
+    else if (funcao == 'A' || funcao == 'a') {
+        int resultado = num1 + num2;
+        printf("O resultado de num1 + num2: %d\n", resultado);
+    }
+    else if (funcao == 'S' || funcao == 's') {
+        int resultado = num1 - num2;
+        printf("O resultado de num1 - num2: %d\n", resultado);
+    }
+    else {
+        printf("Operador invalida!");
+    }
+    return 0;
+}

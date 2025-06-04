@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void imprimirpadrao(int n) {
+
+    // Loop para ir de um a n
+    for (int i = 1; i <= n; i++) {
+
+    // Loop para mandar imprimir i
+    for (int j = 0; j < i; j++) {
+        printf("%d  ", i);
+    }
+        printf("\n");
+    }
+}
+
+int main(void) {
+    int n; //variavel para n
+
+    printf("Digite um numero para 'n': ");
+
+    while (scanf("%d", &n) != 1 || n <= 0) {}
+    imprimirpadrao(n);
+}

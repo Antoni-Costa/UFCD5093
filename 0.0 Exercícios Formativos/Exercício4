@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main(void) {
+
+    int num;
+    printf("Digite um numero: ");
+    scanf("%d", &num);
+
+    if (num > 0) {
+        printf("P\n", num);
+    }
+    else if (num < 0) {
+        printf("N\n", num);
+    }
+    else {
+        printf("O numero %d e invalido\n", num);
+    }
+}

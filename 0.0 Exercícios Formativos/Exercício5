@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(void) {
+
+    double taxa, custo;
+
+
+    printf("Insira a taxa de imposto: ");
+    scanf("%lf", &taxa);
+
+    printf("Insira a custo do produto: ");
+    scanf("%lf", &custo);
+
+    double custo_taxa = (taxa / 100.00) * custo;
+    double total = custo + custo_taxa;
+    printf("O valor total e: %.2f EUR." , total);
+}

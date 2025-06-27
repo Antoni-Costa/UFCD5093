@@ -33,7 +33,7 @@ int main(void) {
    char texto1[max_nome] = "abc";
    char texto2[max_nome] = "abc";
 
-    int comprimento = strcmp(texto1, texto2); // 0-> São iguais, !0 não são iguais,
+    int comprimento = strcmp(texto1, texto2); // 0-> São iguais, diferente de 0 não são iguais, se o primeiro tiver mais letras que o segundo, vai aparecer 1, se for o segundo com mais uma letra, vai aparecer -1
     printf("comprimento: %d\n", comprimento);
 
 

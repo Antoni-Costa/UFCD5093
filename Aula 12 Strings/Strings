@@ -1,0 +1,38 @@
+#include <cctype>
+#include <stdio.h>
+
+/*
+ *%d ou %i para inteiros
+ *%f para floats
+ *%c para char
+ *%S para um array de chars (strings)
+ */
+
+
+void iter(char * str, int size);
+
+int main(void) {
+
+    char nome[] = "Toni";
+    char escola[5] = "ATEC";
+
+    printf("%s da escola %s\n", nome, escola);
+
+    printf("1a letra do nome: %C\n", nome[0]);
+
+    nome[3] = 'y';
+    printf("%s da escola %s\n", nome, escola);
+
+
+    int size = sizeof(nome) / sizeof(char);
+    printf("%d\n", size);
+
+    iter(nome,size);
+
+    return 0;
+}
+ void iter(char arr[], int size) {
+    for (int i = 0; i < size; i++) {
+        printf("%c\n", arr[i]);
+    }
+}

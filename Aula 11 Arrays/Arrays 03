@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main(void) {
+
+
+    char nome[50], apelido[30];
+
+    printf("Insira o seu nome:");
+    scanf("%s", nome);
+    fflush(stdin);
+
+    printf("Insira o seu apelido:");
+    scanf("%s", apelido);
+    fflush(stdin);
+
+    printf("O teu nome é %s %s.", nome, apelido);
+
+    return 0;
+}

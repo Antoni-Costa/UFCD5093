@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+    char nome[] = "Tonecas Costeletas";
+    printf(nome);
+
+    printf("\nstringlength(nome) %lu\n", strlen(nome));
+
+    char auxiliar[] = "ABC";
+    printf("stringcmp(auxiliar \"abc\"): %d\n", strcmp(auxiliar, "ABC"));
+    printf("stringcmp(auxiliar \"abc\"): %d\n", strcmp(auxiliar, "ARB"));
+
+    return 0;
+}

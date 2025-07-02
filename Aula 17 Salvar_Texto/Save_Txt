@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+/*
+ *
+ * modos:
+ * a -> append (add)
+ * w -> write (/)
+ * r -> leitura (read)
+ *
+ */
+
+int main(void) {
+
+    FILE *myfile;
+
+    myfile = fopen("test03.txt", "a");
+
+    fprintf(myfile, "Hello World mfs!!\n");
+
+    fclose(myfile);
+
+    return 0;
+}

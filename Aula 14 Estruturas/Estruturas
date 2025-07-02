@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <string.h>
+
+typedef int inteiro;
+
+
+typedef struct aluno {
+    char nome[50];
+    int idade;
+    double notas[10];
+} Aluno;
+
+  int main(void) {
+      Aluno aluno1 = {"Tony", 24, {16,17,18,14,13}};
+
+      printf("Aluno 1: %s\n", aluno1.nome);
+      printf("Aluno 1 idade: %d\n", aluno1.idade);
+      printf("Aluno 1 notas: %.2f\n", aluno1.notas[0]);
+
+
+      printf("-------------------------\n");
+
+
+      inteiro idade = 10;
+      printf("Inteiro %d\n", idade);
+
+
+      printf("----------------------------------------\n");
+
+
+      Aluno aluno2;
+
+      strcpy(aluno2.nome, "Tony");
+      aluno2.idade = 20;
+      aluno2.notas[0] = 3.5;
+      aluno2.notas[1] = 7.5;
+
+      printf("Aluno 2: %s\n", aluno2.nome);
+      printf("Aluno 2 idade: %d\n", aluno2.idade);
+      printf("Aluno 2 notas: %.2f\n", aluno2.notas[0]);
+
+      printf("---------------------\n");
+
+      Aluno aluno3 = {"Rodrigo", 35, {11,14,12,14,13}};
+      printf("Aluno 3 nome: %s\n", aluno3.nome);
+      printf("Aluno 3 idade: %d\n", aluno3.idade);
+      printf("Aluno 3 notas: %.2f\n", aluno3.notas[0]);
+
+
+
+
+      return 0;
+}

@@ -10,13 +10,37 @@
  */
 void save();
 void read();
+void read2();
+void readall();
 
 int main(void) {
 
     //save();
+    readall();
     read();
+    read2();
     return 0;
 }
+void readall() {
+    char input[LINHA];
+
+    FILE *myFile;
+    myFile = fopen("test03.txt", "r");
+
+
+    if (myFile == NULL) {
+        printf("File not found\n");
+        return;
+    }
+    else {
+        printf("File opened\n");
+    }
+
+    while (fgets(input, LINHA, myFile)) {
+        printf("%s", input);
+    }
+}
+
 void read() {
 
     char input[LINHA];
@@ -25,15 +49,36 @@ void read() {
     myFile = fopen("test03.txt", "r");
 
     fgets(input, LINHA, myFile);
-    printf("%s\n", input);
+    printf("%s", input);
 
-    fgets(input, 5, myFile);
-    printf("%s\n", input);
+    fgets(input, LINHA, myFile);
+    printf("%s", input);
 
-    fgets(input, 2, myFile);
-    printf("%s\n", input);
+    fgets(input, LINHA, myFile);
+    printf("%s", input);
 
     fclose(myFile);
+}
+
+void read2() {
+
+    char input[LINHA];
+
+    FILE *myFile;
+    myFile = fopen("test03.txt", "r");
+
+    fgets(input, LINHA, myFile);
+    printf("%s", input);
+
+    fgets(input, LINHA, myFile);
+    printf("%s", input);
+
+    if (fgets(input, LINHA, myFile)) {
+        printf("%s", input);
+    }
+    else {
+        printf("File completed\n");
+    }
 }
 void save() {
 

@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#define LINHA 100
 /*
  *
  * modos:
@@ -8,8 +8,35 @@
  * r -> leitura (read)
  *
  */
+void save();
+void read();
 
 int main(void) {
+
+    //save();
+    read();
+    return 0;
+}
+void read() {
+
+    char input[LINHA];
+
+    FILE *myFile;
+    myFile = fopen("test03.txt", "r");
+
+    fgets(input, LINHA, myFile);
+    printf("%s\n", input);
+
+    fgets(input, 5, myFile);
+    printf("%s\n", input);
+
+    fgets(input, 2, myFile);
+    printf("%s\n", input);
+
+    fclose(myFile);
+}
+void save() {
+
 
     FILE *myfile;
 
@@ -19,5 +46,4 @@ int main(void) {
 
     fclose(myfile);
 
-    return 0;
 }
